@@ -1,0 +1,43 @@
+ALGORITHME tableauEtTantQue
+
+variable:
+	valMax	: entier
+	valMin	: entier
+	indMax	: entier
+	indMin	: entier
+	cpt		; entier
+
+	tab		: tableau[40] d'entiers
+		
+	valMax <-- 0
+	valMin <-- 40
+	indMax <-- 0
+	indMin <-- 0
+	
+DEBUT
+
+	valMax	<-- 0
+	valMin	<-- 40
+	indMax	<-- 0
+	indMin	<-- 0
+	cpt		<-- 0
+
+	tq cpt < tab.length faire
+		tab[cpt] <-- (int)(Math.random()*21+20)
+
+		si tab[cpt] > valMax faire
+			valMax <-- tab[cpt]
+			indMax <-- cpt
+		fsi
+
+		si tab[cpt] < valMin faire
+			valMin    = tab[cpt];
+			indMin = cpt;
+		fsi
+
+		ecrire("Le valMax est " + valMax + " à la position " + indMax)
+		ecrire("Le valMin est " + valMin + " à la position " + indMin)
+
+		cpt <-- cpt+1
+	ftq
+FIN
