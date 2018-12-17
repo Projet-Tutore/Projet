@@ -5,7 +5,7 @@ variable:
 	valMin	: entier
 	indMax	: entier
 	indMin	: entier
-	cpt		; entier
+	cpt		: entier
 
 	tab		: tableau[40] d'entiers
 		
